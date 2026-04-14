@@ -1,24 +1,51 @@
-export default function Navbar(){
-return(
+export default function Navbar() {
+  return (
+    <nav className="flex justify-between items-center 
+    pb-6 border-b border-[#F2B591]/40 gap-12
+text-gray-500
+hover:text-gray-900">
 
-     <nav className="sticky top-0 z-50 bg-[#0f0f0f]/80 backdrop-blur border-b border-gray-800 flex justify-between items-center py-6">
-      <h1 className="text-lg font-medium tracking-wide">
+      {/* LOGO */}
+      <h1 className="text-lg font-medium text-gray-900 tracking-wide">
         Christina
       </h1>
 
-      <div className="flex gap-8 text-sm text-gray-400">
-        <a href="#work" className="hover:text-white transition">
-          WORK
+      {/* LINKS */}
+      <div className="flex items-center gap-10 text-sm text-gray-600">
+
+        <a
+          href="#about"
+          className="hover:text-black transition relative 
+          after:absolute after:-bottom-1 after:left-0 
+          after:w-0 after:h-[1px] after:bg-black 
+          hover:after:w-full after:transition-all"
+        >
+          About me
         </a>
-        <a href="#about" className="hover:text-white transition">
-          ABOUT
+
+        <a
+          href="#projects"
+          className="hover:text-black transition relative 
+          after:absolute after:-bottom-1 after:left-0 
+          after:w-0 after:h-[1px] after:bg-black 
+          hover:after:w-full after:transition-all"
+        >
+          Projects
         </a>
-        <a href="#contact" className="hover:text-white transition">
-          CONTACT
+
+        <a
+          href="/christina-lu-CV.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-black transition relative 
+          after:absolute after:-bottom-1 after:left-0 
+          after:w-0 after:h-[1px] after:bg-black 
+          hover:after:w-full after:transition-all"
+        >
+          Resume
         </a>
+
       </div>
     </nav>
-
-)
-
+  );
 }
